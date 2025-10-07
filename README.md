@@ -73,7 +73,7 @@ npm start
 | POST   | /scenarios       | Save a scenario                        |
 | GET    | /scenarios       | List all scenarios                     |
 | GET    | /scenarios/:id   | Retrieve scenario details              |
-| POST   | /report/generate | Generate a PDF report (email required) |
+
 
 ## Usage
 
