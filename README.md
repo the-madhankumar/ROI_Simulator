@@ -91,7 +91,7 @@ npm start
 
 **Input Form and Simulation Output Side by Side**
 
-![Dashboard View](https://github.com/the-madhankumar/ROI_Simulator/blob/main/Data/dashboard.png)
+![Dashboard View](https://github.com/the-madhankumar/ROI_Simulator/blob/main/Data/output.png)
 
 
 ## Contributing
