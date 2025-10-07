@@ -34,7 +34,7 @@ A web-based ROI (Return on Investment) simulator that calculates the financial i
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/roi-simulator.git
+git clone https://github.com/the_madhankumar/roi-simulator.git
 ```
 
 2. Navigate to the backend and install dependencies:
