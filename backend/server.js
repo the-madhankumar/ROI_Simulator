@@ -1,10 +1,12 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const PORT = 5000;
 
+app.use(cors());
 app.use(express.json());
 
 const dbPath = path.resolve(__dirname, 'roi_simulator.db');
@@ -73,6 +75,14 @@ function roiPercentage(net_savings, one_time_implementation_cost) {
 }
 
 app.post('/simulate', (req, res) => {
+    console.log("[INFO] /simulate route called");
+
+    if (!req.body) {
+        console.error("[ERROR] req.body is undefined!");
+        return res.status(400).json({ message: "No body received" });
+    }
+
+    console.log("[INFO] req.body received:", req.body);
     const {
         monthly_invoice_volume,
         num_ap_staff,
@@ -131,7 +141,7 @@ app.post('/scenarios', (req, res) => {
     db.run(
         insertQuery,
         [scenario_name, monthly_invoice_volume, num_ap_staff, avg_hours_per_invoice, hourly_wage, error_rate_manual, error_rate_auto, error_cost, time_horizon_months, one_time_implementation_cost, automated_cost_per_invoice, min_roi_boost_factor],
-        function(err) {
+        function (err) {
             if (err) {
                 console.error(err.message);
                 return res.status(500).json({ message: 'Error saving scenario' });
