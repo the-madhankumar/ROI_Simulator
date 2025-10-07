@@ -1,7 +1,3 @@
-Here’s a polished **README** template for your ROI Simulator project. I’ll include placeholders for screenshots which you can replace with actual images.
-
----
-
 # ROI Simulator
 
 A web-based ROI (Return on Investment) simulator that calculates the financial impact of automating manual processes. Users can input parameters such as invoice volume, staff, hourly wage, error rates, and implementation costs to see monthly savings, ROI, and payback period.
@@ -106,8 +102,3 @@ npm start
 
 This project is licensed under the MIT License.
 
----
-
-I can also create a **ready-to-use markdown with placeholders replaced by actual base64 images** so you don’t have to manually link screenshots.
-
-Do you want me to do that next?
